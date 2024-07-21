@@ -13,7 +13,7 @@ const page = async ({ params }: { params: { category: string } }) => {
       </h1>
       <div className='w-4/5 mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12'>
         {relatedProduct.map((product) => {
-          return <ProductCard product={product} />;
+          return <ProductCard product={product} key={product.id}/>;
         })}
       </div>
     </div>
