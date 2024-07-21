@@ -8,7 +8,7 @@ import Link from "next/link";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-const page = () => {
+const Cart = () => {
   const { user } = useUser();
 
   const items = useSelector((state: RootState) => state.cart.items);
@@ -141,4 +141,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Cart;
