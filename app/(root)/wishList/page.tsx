@@ -4,7 +4,7 @@ import { RootState } from "@/store/store";
 import React from "react";
 import { useSelector } from "react-redux";
 
-const page = () => {
+const WishList = () => {
   const items = useSelector((state: RootState) => state.heart.items);
 
   return (
@@ -14,11 +14,11 @@ const page = () => {
       </h1>
       <div className='w-4/5 mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12'>
         {items.map((product) => {
-          return <ProductCard product={product} />;
+          return <ProductCard product={product} key={product.id} />;
         })}
       </div>
     </div>
   );
 };
 
-export default page;
+export default WishList;
